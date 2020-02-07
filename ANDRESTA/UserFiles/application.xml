@@ -1,0 +1,65 @@
+<process_network>
+    
+    <signal name="sig01" source="proc_0" source_port="p01_0" target="proc_1" target_port="p01_1" type="int" />
+    <signal name="sig12" source="proc_1" source_port="p12_0" target="proc_2" target_port="p12_1" type="int" />
+    <signal name="sig23" source="proc_2" source_port="p23_0" target="proc_3" target_port="p23_1" type="int" />
+    <signal name="sig13" source="proc_1" source_port="p13_0" target="proc_3" target_port="p13_1" type="int" />
+    <signal name="sig34" source="proc_3" source_port="p34_0" target="proc_4" target_port="p34_1" type="int" />
+    <signal name="sig41" source="proc_4" source_port="p41_0" target="proc_1" target_port="p41_1" type="int" />
+    <signal name="sig45" source="proc_4" source_port="p45_0" target="proc_5" target_port="p45_1" type="int" />
+    <signal name="sig50" source="proc_5" source_port="p50_0" target="proc_0" target_port="p50_1" type="int" />
+    
+
+    
+    <process name="proc_0" numOfInp="1" numOfOut="1">
+      
+      <port ID="0" direction="INP" init_val="1" name="p5_p0" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p0_p1" numOfToken="1" type="int" />
+      <source_file name="node_0" />
+    </process>
+
+    
+    <process name="proc_1" numOfInp="2" numOfOut="2">
+      
+      <port ID="0" direction="INP" init_val="" name="p0_p1" numOfToken="1" type="int" />
+      <port ID="1" direction="INP" init_val="2" name="p4_p1" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p1_p2" numOfToken="1" type="int" />
+      <port ID="1" direction="OUT" name="p1_p3" numOfToken="1" type="int" />
+      <source_file name="node_1" />
+    </process>
+
+    
+    <process name="proc_2" numOfInp="1" numOfOut="1">
+      
+      <port ID="0" direction="INP" init_val="" name="p1_p2" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p2_p3" numOfToken="1" type="int" />
+      <source_file name="node_2" />
+    </process>
+
+    
+    <process name="proc_3" numOfInp="2" numOfOut="1">
+      
+      <port ID="0" direction="INP" init_val="" name="p2_p3" numOfToken="1" type="int" />
+      <port ID="1" direction="INP" init_val="" name="p1_p3" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p3_p4" numOfToken="1" type="int" />
+      <source_file name="node_3" />
+    </process>
+
+    
+    <process name="proc_4" numOfInp="1" numOfOut="2">
+      
+      <port ID="0" direction="INP" init_val="" name="p3_p4" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p4_p1" numOfToken="1" type="int" />
+      <port ID="1" direction="OUT" name="p4_p5" numOfToken="1" type="int" />
+      <source_file name="node_2" />
+    </process>
+
+    
+    <process name="proc_5" numOfInp="1" numOfOut="1">
+      
+      <port ID="0" direction="INP" init_val="" name="p4_p5" numOfToken="1" type="int" />
+      <port ID="0" direction="OUT" name="p5_p0" numOfToken="1" type="int" />
+      <source_file name="node_2" />
+    </process>
+
+  </process_network>

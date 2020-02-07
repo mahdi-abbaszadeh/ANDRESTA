@@ -1,0 +1,32 @@
+
+<profiling_shceduling>
+    
+  <link_bw>250</link_bw>
+  <processor_load>350</processor_load>
+  <max_th>5</max_th>
+  <desired_th>2</desired_th>
+  <num_of_graph_cycles>1</num_of_graph_cycles>
+  <cycles_times>2</cycles_times>
+  
+  <inStream>
+      <l1>12</l1>
+      <l2>2</l2>
+      <l3>3</l3>
+      <l4>5</l4>
+      <l5>20</l5>
+      <l6>13</l6>
+      <l7>11</l7>
+      <l8>8</l8>
+  </inStream>
+  
+  <actor_load>
+      <l1>120</l1>
+      <l2>20</l2>
+      <l3>30</l3>
+      <l4>50</l4>
+      <l3>30</l3>
+      <l4>50</l4>
+  </actor_load>
+  
+</profiling_shceduling>
+
